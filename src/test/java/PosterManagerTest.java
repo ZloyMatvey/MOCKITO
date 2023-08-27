@@ -41,7 +41,7 @@ public class PosterManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    // Тест вывода всех фильмов в порядке добавления
+    // Вывод максимально лимит (по умолчанию) штук последних добавленных фильмов в обратном от добавления порядке
     @Test
     public void findLast() {
         PosterManager movie = new PosterManager();
@@ -56,7 +56,7 @@ public class PosterManagerTest {
         Movies[] actual = movie.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
-
+     // Вывод максимально лимит (установленный) штук последних добавленных фильмов в обратном от добавления порядке
     @Test
     public void findLastNext() {
         PosterManager movie = new PosterManager(4);
